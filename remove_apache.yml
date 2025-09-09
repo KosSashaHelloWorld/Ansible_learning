@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    pacman:
+      update_cache: yes
+
+  - name: remove php support for apache
+    pacman:
+      name: php-apache
+      state: absent
+
+  - name: remove apache2 package
+    pacman: 
+      name: apache
+      state: absent
