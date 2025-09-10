@@ -1,1 +1,41 @@
 # Ansible_learning
+
+linux btw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vim btw
