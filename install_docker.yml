@@ -1,0 +1,27 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index (pacman)
+    pacman:
+      update_cache: yes
+    when: ansible_distribution == "Archlinux"
+
+  - name: install docker package (pacman)
+    pacman: 
+      name: docker
+      state: latest
+    when: ansible_distribution == "Archlinux"
+
+  - name: update repository index (apt)
+    apt:
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install docker-ce package (apt)
+    apt: 
+      name: docker-ce-cli
+      state: latest
+    when: ansible_distribution == "Ubuntu"
